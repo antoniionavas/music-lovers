@@ -6,7 +6,7 @@ const gameScreenNode = document.querySelector("#game-screen");
 const gameBoxNode = document.querySelector("#game-box");
 const gameoverScreenNode = document.querySelector("#gameover-screen");
 
-let gameObj = null; 
+let gameObject = null; 
 
 // * STATE MANAGEMENT FUNCTIONS
 
@@ -19,10 +19,10 @@ function startGame(){
 
     // .. que el juego inicie
     //pendiente crear un nuevo objeto de Game e inicia el gameLoop
-    gameObj = new Game(); //nueva partida 
+    gameObject = new Game(); //nueva partida 
     console.log(gameObj)
 
-    gameObj.gameLoop()
+    gameObject.gameLoop()
 
 }
 
