@@ -17,13 +17,11 @@ function startGame(){
     splashScreenNode.style.display = "none";
     gameScreenNode.style.display = "flex";
 
-    // .. que el juego inicie
-    //pendiente crear un nuevo objeto de Game e inicia el gameLoop
+    // creo un nuevo objeto de Game e inicia el gameLoop
     gameObject = new Game(); //nueva partida 
-    console.log(gameObj)
+    gameObject.gameLoop() // llamamos al objeto e invocamos la funcion de recursion
 
-    gameObject.gameLoop()
-
+    
 }
 
 
