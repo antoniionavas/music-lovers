@@ -10,7 +10,11 @@ class Game{
 
          //propiedades de mi freddie
          this.freddie = new Freddie ();
-         this.pregunta = new Questions ();
+         //propiedades preguntas
+         const randomquestions =  Math.floor(Math.random() * questionsAnswer.length);
+         this.pregunta = new Questions (randomquestions);
+
+         //propiedad respuestas
 
     }
 

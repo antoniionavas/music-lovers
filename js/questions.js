@@ -2,8 +2,10 @@
 class Questions {
 
     constructor (pregunta){
-        
+        this.randomquestions = pregunta;
         this.nodeQuestions = document.createElement("div");
+        this.nodeQuestions.textContent = questionsAnswer[this.randomquestions].pregunta;
+        this.nodeQuestions.id = "question";
         gameBoxNode.append(this.nodeQuestions)
 
             //Propiedades del div de las preguntas
@@ -19,11 +21,11 @@ class Questions {
             this.hQuestions = 150; //alto
         
             //Tamaño y posicion inicial
-            this.node.style.width = `${this.w}px`;
-            this.node.style.height = `${this.h}px`;
-            this.node.style.position = "absolute";
-            this.node.style.top = `${this.y}px`;
-            this.node.style.left = `${this.x}px`;
+            this.nodeQuestions.style.width = `${this.w}px`;
+            this.nodeQuestions.style.height = `${this.h}px`;
+            this.nodeQuestions.style.position = "absolute";
+            this.nodeQuestions.style.top = `${this.y}px`;
+            this.nodeQuestions.style.left = `${this.x}px`;
     }
 
             //Métodos preguntas
