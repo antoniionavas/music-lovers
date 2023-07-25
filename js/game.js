@@ -5,22 +5,32 @@ class Game{
 
     constructor(){
         //propiedades de mi juego
-
+        
 
 
 
          //propiedades de mi freddie
          this.freddie = new Freddie ();
-
+         this.pregunta = new Questions ();
 
     }
 
     gameLoop = () => {
     
-    requestAnimationFrame (this.gameLoop);
+        requestAnimationFrame (this.gameLoop); 
+
+    }
+
+    generarPreguntas = () => {
+    
+        for (i = 0; questionsAnswer.length > i; i++){
+        
+            return questionsAnswer[i]["pregunta"];
+        }
 
  }
 }
+
 
 
 
