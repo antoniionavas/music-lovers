@@ -7,11 +7,17 @@ class Game{
         //propiedades de mi juego
 
 
+
+
+         //propiedades de mi freddie
+         this.freddie = new Freddie ();
+
+
     }
 
     gameLoop = () => {
     
-    
+   
     requestAnimationFrame (this.gameLoop);
 
  }
@@ -38,11 +44,12 @@ class Game{
 //movimiento del personaje
 //acción vidas (respuesta incorrecta )
 //accion score (respuesta correcta )
-//accion música x tiempo para elegir respuesta
-//gameover
-//reinicio
+//finish screen
+//gameover screen
+//reinicio 
 
 //EXTRA
 //accion del personaje
 //score
 //tiempo restante para contestar
+//accion música x tiempo para elegir respuesta
