@@ -10,27 +10,25 @@ class Freddie {
     gameBoxNode.append(this.node)
 
     //propiedades de mi personaje
-    this.x = 250; // posicion eje x
-    this.y = 600; // posicion eje y
-    this.w = 150; //ancho
-    this.h = 150; //alto
+    this.xFreddie = 250; // posicion eje x
+    this.yFreddie = 600; // posicion eje y
+    this.wFreddie = 150; //ancho
+    this.hFreddie = 150; //alto
 
     //ajustar el tamaño y posicion inicial de Freddie
 
-    this.node.style.width = `${this.w}px`;
-    this.node.style.height = `${this.h}px`;
+    this.node.style.width = `${this.wFreddie}px`;
+    this.node.style.height = `${this.hFreddie}px`;
     this.node.style.position = "absolute";
-    this.node.style.top = `${this.y}px`;
-    this.node.style.left = `${this.x}px`;
+    this.node.style.top = `${this.yFreddie}px`;
+    this.node.style.left = `${this.xFreddie}px`;
     }
 
 
     //métodos de mi personaje
-
-    rotationEffect = () => {
-    
-    
+    positionFreddie = () => {
+        this.node.style.left = `${this.xFreddie}px`;
+        this.node.style.top = `${this.yFreddie}px`;
     }
-
 
 }

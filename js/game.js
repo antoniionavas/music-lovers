@@ -17,7 +17,6 @@ class Game{
 
     gameLoop = () => {
     
-   
     requestAnimationFrame (this.gameLoop);
 
  }

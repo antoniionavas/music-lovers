@@ -26,11 +26,24 @@ function startGame(){
 
 
 
+
+
+
 // * ADD EVENT LISTENERS
 
 startBtnNode.addEventListener("click", startGame)  
 
-
+window.addEventListener("keydown", (event) => {
+    if (event.key === "ArrowRight"){
+        this.xFreddie += 20;
+    } else if (event.key === "ArrowLeft"){
+        this.xFreddie -= 20;
+    } else if (event.key === "ArrowUp"){
+        this.yFreddie += 20;
+    } else if (event.key === "ArrowDown"){
+        this.yFreddie -= 20;
+    }
+})
 
 
 
