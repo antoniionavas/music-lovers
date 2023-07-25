@@ -35,16 +35,16 @@ function startGame(){
 startBtnNode.addEventListener("click", startGame)  
 
 window.addEventListener("keydown", (event) => {
-    if (event.key === "ArrowRight"){
-        this.xFreddie += 20;
-    } else if (event.key === "ArrowLeft"){
-        this.xFreddie -= 20;
-    } else if (event.key === "ArrowUp"){
-        this.yFreddie += 20;
-    } else if (event.key === "ArrowDown"){
-        this.yFreddie -= 20;
+       if (event.key === "ArrowUp") {
+      gameObject.freddie.moveUp();
+    } else if (event.key === "ArrowDown") {
+      gameObject.freddie.moveDown();
+    } else if (event.key === "ArrowLeft") {
+      gameObject.freddie.moveLeft();
+    } else if (event.key === "ArrowRight") {
+      gameObject.freddie.moveRight();
     }
-})
+  });
 
 
 

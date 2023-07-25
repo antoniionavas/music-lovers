@@ -11,7 +11,7 @@ body {
     font-size: 20px;
     display: flex;
     position: relative;
-    margin-top:500px;
+    top:200px;
     border-radius: 10px; 
   }
 
@@ -24,15 +24,14 @@ body {
   }
 
   #title-startScreen {
-    font-size: 30px;
+    font-size: 50px;
     font-weight: bold;
     color: white;
-    line-height: 40px;
+    line-height: 60px;
     letter-spacing: 6px;
     display: flex;
     position: relative;
-    top: -70px;
-    
+    top: 30px;
     }
   
   .container {
@@ -45,11 +44,11 @@ body {
 
 
   #splash-screen { 
-    background-image: url("../images/music-lovers-home.jpg"); 
+    background-image: url("../images/start.jpg"); 
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    width: 1600px;
+    width: 1500px;
     height:900px; 
     position:relative; /* posicionar elementos internos relativos a la caja */
     border-radius: 20px;
@@ -69,7 +68,7 @@ body {
     overflow:hidden; /* prevenir que los elementos visualmente se salgan de la pantalla de juego */
     position:relative; /* posicionar elementos internos relativos a la caja */
     user-select: none; /*evitará que resalten o remarquen los elementos del canvas */
-    background-image: url("../images/bg.jpg"); 
+    background-image: url("../images/main-background.jpg"); 
     background-position: center;
     background-size: cover;
 

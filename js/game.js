@@ -1,4 +1,3 @@
-console.log("desde game.js")
 
 class Game{
     
@@ -21,22 +20,6 @@ class Game{
 
     }
 
-    generarPreguntas = () => {
-    
-        for (i = 0; questionsAnswer.length > i; i++){
-        
-            return questionsAnswer[i]["pregunta"];
-        }
-    }
-
-
-    generarRespuestas = () => {
-    
-        for (i = 0; questionsAnswer.length > i; i++){
-        
-            return questionsAnswer[i]["respuesta"];
-        }
-    }
 }
 
 

@@ -17,6 +17,14 @@ class Questions {
             this.yQuestions = 30; //ejeY
             this.wQuestions = 150; //ancho
             this.hQuestions = 150; //alto
-
+        
+            //Tamaño y posicion inicial
+            this.node.style.width = `${this.w}px`;
+            this.node.style.height = `${this.h}px`;
+            this.node.style.position = "absolute";
+            this.node.style.top = `${this.y}px`;
+            this.node.style.left = `${this.x}px`;
     }
+
+            //Métodos preguntas
 }
