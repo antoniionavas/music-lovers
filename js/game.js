@@ -27,8 +27,16 @@ class Game{
         
             return questionsAnswer[i]["pregunta"];
         }
+    }
 
- }
+
+    generarRespuestas = () => {
+    
+        for (i = 0; questionsAnswer.length > i; i++){
+        
+            return questionsAnswer[i]["respuesta"];
+        }
+    }
 }
 
 
