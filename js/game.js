@@ -9,7 +9,10 @@ class Game {
 
     //propiedad respuestas
     this.AnswersArray = [];
-    //this.trueAnswer = questionsAnswer[numero].opciones
+    this.trueAnswer = questionsAnswer[this.randomquestions]
+    this.trueAnswerIndex = this.trueAnswer.respuesta;
+    this.trueAnswerText  = this.trueAnswer.opciones[this.trueAnswerIndex];
+    
     this.isGameOn = true;
 
     //propiedades de las vidas
@@ -21,7 +24,18 @@ class Game {
     gameScreenNode.style.display = "none"; //ocultar pantalla de juego
     gameoverScreenNode.style.display = "flex"; //mostrar la pantalla final
   };
-  
+
+
+  avanceQuestion  = () => { 
+
+    this.randomquestions = Math.floor(Math.random() * questionsAnswer.length);
+    this.pregunta = new Questions(this.randomquestions);
+    this.trueAnswer = questionsAnswer[this.randomquestions]
+    this.trueAnswerIndex = this.trueAnswer.respuesta;
+    this.trueAnswerText  = this.trueAnswer.opciones[this.trueAnswerIndex];
+    this.showAnswer(numero);
+    }
+
 
   collisionFreddieAnswer = () => {
     this.AnswersArray.forEach((cadaRespuesta) => {
@@ -31,9 +45,15 @@ class Game {
         this.freddie.x + this.freddie.w > cadaRespuesta.x &&
         this.freddie.y < cadaRespuesta.y + cadaRespuesta.h &&
         this.freddie.y + this.freddie.h > cadaRespuesta.y
+        
       ) {
-            if (cadaRespuesta.respuesta === this.trueAnswer){
+        console.log(cadaRespuesta.respuesta);
+        console.log(this.trueAnswerText);
+            if (cadaRespuesta.respuesta === this.trueAnswerText){
                 console.log("respuesta correcta")
+                cadaRespuesta.nodeAnswers.classList.add("trueAnswer");
+                this.avanceQuestion();
+
             } else {
             
                 console.log("respuesta incorrecta")
@@ -42,11 +62,6 @@ class Game {
         }
     });
   };
-
-
-
-
-
 
   showAnswer = (numero) => {
     if (this.AnswersArray.length < 4) {
@@ -69,6 +84,7 @@ class Game {
     this.showAnswer(this.randomquestions); //invoco a la función de las respuestas
     this.collisionFreddieAnswer(); //invoco a la función de colisión las respuestas
     this.freddie.positionUpdate(); //actualizando posicion de freddie
+
 
     if (this.isGameOn === true) {
       requestAnimationFrame(this.gameLoop);
