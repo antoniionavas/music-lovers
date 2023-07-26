@@ -45,26 +45,19 @@ body {
 
   #splash-screen { 
     background-image: url("../images/start.jpg"); 
-    background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     width: 1500px;
-    height:900px; 
+    height:800px; 
     position:relative; /* posicionar elementos internos relativos a la caja */
     border-radius: 20px;
   }
-
-  #splash-screen img {
-  
-    width: 900px;
-    height:700px; 
-  }
-
 
   #game-box{
     background-color: darkgray;
     width: 1500px;
     height:800px; 
+    border-radius: 20px;
     overflow:hidden; /* prevenir que los elementos visualmente se salgan de la pantalla de juego */
     position:relative; /* posicionar elementos internos relativos a la caja */
     user-select: none; /*evitará que resalten o remarquen los elementos del canvas */
@@ -75,9 +68,17 @@ body {
 }
 
 
-#game-screen, #gameover-screen {
-    display: none; /* hace desaparecer los elementos temporalmente en el dom*/
-}
+  #game-screen{
+      display: none; /* hace desaparecer los elementos temporalmente en el dom*/
+  }
+
+  #gameover-screen{
+    display: none;
+    background-image: url("../images/gameover.jpg"); 
+    width: 1500px;
+    height:800px; 
+    border-radius: 20px;
+  }
 
 
   #question {
@@ -99,5 +100,13 @@ body {
     border: 2px solid white;
     background-color: black;
     border-radius: 20px;
-    font-size: 20px;
+  }
+
+
+  .trueAnswer {
+    color: white;
+    border: 2px solid white;
+    background-color: green;
+    font-style: italic;
+    border-radius: 20px;
   }
