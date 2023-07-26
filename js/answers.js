@@ -1,21 +1,25 @@
 
 class Answers {
 
-    constructor (numero, positionX, positionY){
+    constructor (numero, positionX, positionY,){
         
         //Crea un elemento div 
         this.numero = numero;
         this.nodeAnswers = document.createElement("div");
         this.nodeAnswers.textContent = this.numero;
         this.nodeAnswers.className = "answerClass";
-      
+       
+
         gameBoxNode.append(this.nodeAnswers)
 
         
         //propiedades de respuesta
         this.x = positionX; // posicion eje x
         this.y = positionY; // posicion eje y
-   
+        this.w = 75;
+        this.h = 75;
+
+
         //Propiedades del div de las respuestas
         this.nodeAnswers.style.fontSize = "20px";
         this.nodeAnswers.style.fontWeight = "bold";
