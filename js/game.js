@@ -2,9 +2,7 @@
 class Game{
     
 
-    constructor(){
-        //propiedades de mi juego
-        
+    constructor(){     
 
          //propiedades de mi freddie
          this.freddie = new Freddie ();
@@ -15,6 +13,35 @@ class Game{
             this.AnswersArray = [];
             this.isGameOn = true;
     }
+
+
+    gameOver = () => { 
+        this.isGameOn = false;
+        gameScreenNode.style.display = "none"; //ocultar pantalla de juego
+        gameoverScreenNode.style.display = "flex";//mostrar la pantalla final
+        
+        }
+
+
+
+        
+    collisionFreddieAnswer = () => {
+        this.AnswersArray.forEach((cadaRespuesta) => {
+            //las respuestas => respuesta
+            console.log(cadaRespuesta)
+            if (
+                this.freddie.x < cadaRespuesta.x + cadaRespuesta.w &&
+                this.freddie.x + this.freddie.w > cadaRespuesta.x &&
+                this.freddie.y < cadaRespuesta.y + cadaRespuesta.h &&
+                this.freddie.y + this.freddie.h > cadaRespuesta.y
+                ){
+                
+                    console.log("está colisionando");
+                }
+
+        })
+    }
+    
 
     showAnswer = (numero) => { 
         if (this.AnswersArray.length < 4){
@@ -29,11 +56,12 @@ class Game{
     gameLoop = () => {
 
         this.showAnswer(this.randomquestions); //invoco a la función de las respuestas
+        this.collisionFreddieAnswer(); //invoco a la función de colisión las respuestas
 
 
         if (this.isGameOn === true) {
             requestAnimationFrame (this.gameLoop); 
-            }
+            } // si isGameOn es falso deten la recursion
         }
 
   

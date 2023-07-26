@@ -15,6 +15,8 @@ class Freddie {
     this.w = 150; //ancho
     this.h = 150; //alto
 
+    this.movementFreddie = 20;
+
     //ajustar el tamaño y posicion inicial de Freddie
 
     this.node.style.width = `${this.w}px`;
@@ -23,7 +25,7 @@ class Freddie {
     this.node.style.top = `${this.y}px`;
     this.node.style.left = `${this.x}px`;
 
-    this.movementFreddie = 20;
+    
 
     }
 

@@ -8,10 +8,11 @@ class Answers {
         this.nodeAnswers = document.createElement("div");
         this.nodeAnswers.textContent = this.numero;
         this.nodeAnswers.className = "answerClass";
+        this.nodeAnswers.className = "answerTrue";
         gameBoxNode.append(this.nodeAnswers)
 
         
-        //propiedades de pollito
+        //propiedades de respuesta
         this.x = positionX; // posicion eje x
         this.y = positionY; // posicion eje y
    
