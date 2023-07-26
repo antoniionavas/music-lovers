@@ -10,7 +10,7 @@ class Freddie {
     gameBoxNode.append(this.node)
 
     //propiedades de mi personaje
-    this.x = 250; // posicion eje x
+    this.x = 700; // posicion eje x
     this.y = 600; // posicion eje y
     this.w = 150; //ancho
     this.h = 150; //alto
@@ -54,7 +54,5 @@ class Freddie {
           this.node.style.left = `${this.x}px`;
         }
       };
-
-
 
 }

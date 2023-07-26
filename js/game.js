@@ -6,24 +6,37 @@ class Game{
         //propiedades de mi juego
         
 
-
-
          //propiedades de mi freddie
          this.freddie = new Freddie ();
          //propiedades preguntas
-         const randomquestions =  Math.floor(Math.random() * questionsAnswer.length);
-         this.pregunta = new Questions (randomquestions);
-
+         this.randomquestions =  Math.floor(Math.random() * questionsAnswer.length);
+         this.pregunta = new Questions (this.randomquestions);
          //propiedad respuestas
-
+            this.AnswersArray = [];
+            this.isGameOn = true;
     }
+
+    showAnswer = (numero) => { 
+        if (this.AnswersArray.length < 4){
+            this.AnswersArray.push(new Answers(questionsAnswer[numero].opciones[0], 130, 350));
+            this.AnswersArray.push(new Answers(questionsAnswer[numero].opciones[1], 350, 250));
+            this.AnswersArray.push(new Answers(questionsAnswer[numero].opciones[2], 700, 350));
+            this.AnswersArray.push(new Answers(questionsAnswer[numero].opciones[3], 1000, 250));
+            }   
+        }
+
 
     gameLoop = () => {
-    
-        requestAnimationFrame (this.gameLoop); 
 
-    }
+        this.showAnswer(this.randomquestions); //invoco a la función de las respuestas
 
+
+        if (this.isGameOn === true) {
+            requestAnimationFrame (this.gameLoop); 
+            }
+        }
+
+  
 }
 
 

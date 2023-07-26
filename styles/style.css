@@ -78,3 +78,26 @@ body {
 #game-screen, #gameover-screen {
     display: none; /* hace desaparecer los elementos temporalmente en el dom*/
 }
+
+
+  #question {
+    font-size:  30px;
+    font-weight: bold;
+    padding : 25px;
+    text-align: center;
+    border: 2px solid black;
+    color: black;
+    position:absolute;
+    left: 450px;
+    margin-top:40px;
+    border-radius: 20px;
+    background-color: white;
+  }
+
+  .answerClass {
+    color: white;
+    border: 2px solid white;
+    background-color: black;
+    border-radius: 20px;
+    font-size: 20px;
+  }
