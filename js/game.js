@@ -28,7 +28,8 @@ class Game{
     collisionFreddieAnswer = () => {
         this.AnswersArray.forEach((cadaRespuesta) => {
             //las respuestas => respuesta
-            console.log(cadaRespuesta)
+        console.log(cadaRespuesta)
+        console.log(this.freddie)
             if (
                 this.freddie.x < cadaRespuesta.x + cadaRespuesta.w &&
                 this.freddie.x + this.freddie.w > cadaRespuesta.x &&
@@ -57,8 +58,7 @@ class Game{
 
         this.showAnswer(this.randomquestions); //invoco a la función de las respuestas
         this.collisionFreddieAnswer(); //invoco a la función de colisión las respuestas
-
-
+        
         if (this.isGameOn === true) {
             requestAnimationFrame (this.gameLoop); 
             } // si isGameOn es falso deten la recursion

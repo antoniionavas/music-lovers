@@ -8,7 +8,7 @@ class Answers {
         this.nodeAnswers = document.createElement("div");
         this.nodeAnswers.textContent = this.numero;
         this.nodeAnswers.className = "answerClass";
-        this.nodeAnswers.className = "answerTrue";
+      
         gameBoxNode.append(this.nodeAnswers)
 
         
