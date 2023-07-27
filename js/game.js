@@ -30,6 +30,7 @@ class Game {
     this.gameOverSound = new Audio (
       "../sounds/gameOver.mp3"
       );
+    this.gameSound.pause();
     this.gameOverSound.play();
     this.gameOverSound.volume = 0.1;
   };
@@ -90,7 +91,7 @@ class Game {
           this.avanceQuestion();
           this.avanceAnswer();
 
-          if (this.winCount === 3)
+          if (this.winCount === 4)
               this.winGame();
               console.log(this.winCount)
         } else {
@@ -141,18 +142,11 @@ class Game {
     this.showAnswer(this.randomquestions); //invoco a la función de las respuestas
     this.collisionFreddieAnswer(); //invoco a la función de colisión las respuestas
     this.freddie.positionUpdate(); //actualizando posicion de freddie
-
     if (this.isGameOn === true) {
       requestAnimationFrame(this.gameLoop);
     } // si isGameOn es falso deten la recursion
   };
 
-
-
-  //implementar sonidos en diferentes momentos
-  //meter nuevas preguntas y respuestas
-  //configurar visualizacion del contador
-  //boton restart winscreen
 
 }
 

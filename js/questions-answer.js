@@ -9,14 +9,14 @@ const questionsAnswer = [
     },
 
     {
-        pregunta: "¿Qué estrella de los 80 es reconocida como la artista femenina más vendida de todos los tiempos?",
+        pregunta: "¿Qué estrella es reconocida como la artista femenina más vendida de todos los tiempos?",
         respuesta: 0,
         opciones: ["Maddona", "Cher", "Tina Turner", "Gloria Estefan"],  
     },
 
 
     {
-        pregunta: "¿Cuál es el único país que ha ganado 3 concursos de canciones de Eurovisión seguidos (1992, 1993 y 1994)?",
+        pregunta: "¿Cuál es el único país que ha ganado 3 concursos de canciones de Eurovisión seguidos?",
         respuesta: 2,
         opciones: ["Francia", "España", "Irlanda", "Italia"],  
     },
@@ -62,7 +62,37 @@ const questionsAnswer = [
         respuesta: 0,
         opciones: ["Rolling Stones", "Metallica", "The Beatles", "Queen"],
     },
-    
 
+    {
+        pregunta: "¿A qué grupo español le dolía la cara de ser tan guapo?",
+        respuesta: 0,
+        opciones: ["Los Inhumanos", "Mecano", "Radio futura", "Estopa"],
+    },
+
+    {
+        pregunta: "¿Cuál es el nombre de pila del compositor clásico Vivaldi?",
+        respuesta: 3,
+        opciones: ["David", "Joseph", "Mateo", "Antonio"],
+    },
+
+    {
+        pregunta: "¿Cuál fué la última canción que cantó Bob Marley?",
+        respuesta: 0,
+        opciones: ["Redemption song", "War", "Jamming", "Soul Rebel"],
+    },
+    
+    
+    {
+        pregunta: "¿Qué edad tenía Jim Morrison cuando murió?",
+        respuesta: 2,
+        opciones: ["35", "25", "27", "40"],
+    },
+    
+    {
+        pregunta: "¿Qué Beatle cruzó Abbey Road descalzo?",
+        respuesta: 3,
+        opciones: ["Pete", "Ringo", "John", "Paul"],
+    },
+    
 
 ]

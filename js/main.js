@@ -9,6 +9,7 @@ const gameBoxNode = document.querySelector("#game-box");
 const gameoverScreenNode = document.querySelector("#gameover-screen");
 const winScreenNode = document.querySelector("#win-screen");
 
+
 let gameObject = null;
 
 // * STATE MANAGEMENT FUNCTIONS
@@ -24,16 +25,23 @@ function startGame() {
   // creo un nuevo objeto de Game e inicia el gameLoop
   gameObject = new Game(); //nueva partida
   gameObject.gameLoop(); // llamamos al objeto e invocamos la funcion de recursion
+
+  this.gameSound = new Audio (
+    "../sounds/tiktokGame.mp3"
+    );
+  this.gameSound.play();
+  this.gameSound.volume = 0.1;
 }
 
 
 function restartGame() {
   console.log("iniciando el juego");
-
   gameoverScreenNode.style.display = "none";
   splashScreenNode.style.display = "flex";
   winScreenNode.style.display = "none";
   gameBoxNode.innerHTML="";
+  this.gameSound.pause();
+  
 }
 
 
