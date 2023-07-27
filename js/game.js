@@ -14,11 +14,12 @@ class Game {
     this.trueAnswerText  = this.trueAnswer.opciones[this.trueAnswerIndex];
     
     this.isGameOn = true;
+    this.gameWin = false;
 
     //propiedades de las vidas
     this.livesHeart = new Lives();
-    
-    //contadorVidas = 4;
+    this.lives = 4;
+    this.winCount = 0;
 
   }
 
@@ -42,6 +43,15 @@ class Game {
   };
 
 
+  winGame = () => {
+      this.gameWin = true;
+      gameoverScreenNode.style.display = "none"; //ocultar la pantalla final
+      gameScreenNode.style.display = "none"; //ocultar pantalla de juego
+      splashScreenNode.style.display = "none" //ocultar pantalla 
+      winScreenNode.style.display = "flex"; // mostrar pantalla
+    }
+
+
   avanceQuestion  = () => { 
     this.pregunta.removeQuestion();
     this.randomquestions = Math.floor(Math.random() * questionsAnswer.length);
@@ -55,7 +65,7 @@ class Game {
     }                                   
      this.AnswersArray = []; // vaciar el array 
      this.showAnswer(this.randomquestions); // mostrar nuevas respuestas asociadas a la nueva pregunta
-     //volver a posicion inicial freddie
+                                            //volver a posicion inicial freddie
    
   }
 
@@ -74,14 +84,18 @@ class Game {
         console.log(this.trueAnswerText);
             if (cadaRespuesta.respuesta === this.trueAnswerText){
                 console.log("respuesta correcta")
+                this.winCount++;
                 cadaRespuesta.nodeAnswers.classList.add("trueAnswer");
                 this.avanceQuestion();
                 this.avanceAnswer();
 
+                if (this.winCount === 3)
+                  this.winGame();
             } else {
             
                 console.log("respuesta incorrecta")
-                //this.numeroVida();
+                
+                
             }
         }
     });

@@ -72,6 +72,13 @@ body {
       display: none; /* hace desaparecer los elementos temporalmente en el dom*/
   }
 
+  #win-screen{
+    background-image: url("../images/youwin.jpg"); 
+    width: 1500px;
+    height:800px; 
+    border-radius: 20px;
+  }
+
   #gameover-screen{
     display: none;
     background-image: url("../images/gameover.jpg"); 

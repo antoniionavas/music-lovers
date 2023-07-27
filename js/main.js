@@ -6,6 +6,7 @@ const splashScreenNode = document.querySelector("#splash-screen");
 const gameScreenNode = document.querySelector("#game-screen");
 const gameBoxNode = document.querySelector("#game-box");
 const gameoverScreenNode = document.querySelector("#gameover-screen");
+const winScreenNode = document.querySelector("#win-screen");
 
 let gameObject = null;
 
@@ -16,6 +17,7 @@ function startGame() {
 
   splashScreenNode.style.display = "none";
   gameScreenNode.style.display = "flex";
+  winScreenNode.style.display = "none";
 
   // creo un nuevo objeto de Game e inicia el gameLoop
   gameObject = new Game(); //nueva partida
@@ -28,6 +30,7 @@ function restartGame() {
 
   gameoverScreenNode.style.display = "none";
   splashScreenNode.style.display = "flex";
+  winScreenNode.style.display = "none";
   gameBoxNode.innerHTML="";
 }
 
