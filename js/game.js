@@ -17,6 +17,7 @@ class Game {
 
     //propiedades de las vidas
     this.livesHeart = new Lives();
+    
     //contadorVidas = 4;
 
   }
@@ -45,19 +46,17 @@ class Game {
     this.pregunta.removeQuestion();
     this.randomquestions = Math.floor(Math.random() * questionsAnswer.length);
     this.pregunta = new Questions(this.randomquestions);
- 
     }
 
 
    avanceAnswer = () => { 
     for (let i = 0; i < this.AnswersArray.length; i++){   
-    
-    this.AnswersArray[i].removeAnswer(); // pasar por cada respuesta del array y ejecutar el metodo para removerlo del DOM
-    
+      this.AnswersArray[i].removeAnswer(); // pasar por cada respuesta del array y ejecutar el metodo para removerlo del DOM
     }                                   
-    this.AnswersArray = []; // vaciar el array 
-     this.showAnswer(numero); // mostrar nuevas respuestas asociadas a la nueva pregunta
-                              //volver a posicion inicial freddie
+     this.AnswersArray = []; // vaciar el array 
+     this.showAnswer(this.randomquestions); // mostrar nuevas respuestas asociadas a la nueva pregunta
+     //volver a posicion inicial freddie
+   
   }
 
 

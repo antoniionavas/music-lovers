@@ -17,6 +17,6 @@ class Questions {
 
     removeQuestion  = () => {
     
-      this.nodeQuestions.remove();
+      this.nodeQuestions.remove()
     }
 }
