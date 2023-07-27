@@ -17,22 +17,22 @@ class Game {
 
     //propiedades de las vidas
     this.livesHeart = new Lives();
-    contadorVidas = 3;
+    //contadorVidas = 4;
 
   }
 
 
-  numeroVida = () => {
-    if (contadorVidas > 0) {
-      console.log("reste una vida");
-      contadorVidas = contadorVidas - 1;
-    }
-    else if (contadorVidas === 0) {
-      console.log("gameOver");
-      //this.gameOver();
-    }
-      return contadorVidas;
-  }
+  // numeroVida = () => {
+  //   if (contadorVidas > 0) {
+  //     console.log("reste una vida");
+  //     contadorVidas = contadorVidas - 1;
+  //   }
+  //   else if (contadorVidas === 0) {
+  //     console.log("gameOver");
+  //     //this.gameOver();
+  //   }
+  //     return contadorVidas;
+  // }
 
   gameOver = () => {
     this.isGameOn = false;
@@ -45,16 +45,19 @@ class Game {
     this.pregunta.removeQuestion();
     this.randomquestions = Math.floor(Math.random() * questionsAnswer.length);
     this.pregunta = new Questions(this.randomquestions);
-    this.trueAnswer = questionsAnswer[this.randomquestions]
-    this.trueAnswerIndex = this.trueAnswer.respuesta;
-    this.trueAnswerText  = this.trueAnswer.opciones[this.trueAnswerIndex];
-  
+ 
     }
 
 
-  avanceAnswer = () => { 
-    this.trueAnswer.removeAnswer();
-    this.showAnswer(numero);
+   avanceAnswer = () => { 
+    for (let i = 0; i < this.AnswersArray.length; i++){   
+    
+    this.AnswersArray[i].removeAnswer(); // pasar por cada respuesta del array y ejecutar el metodo para removerlo del DOM
+    
+    }                                   
+    this.AnswersArray = []; // vaciar el array 
+     this.showAnswer(numero); // mostrar nuevas respuestas asociadas a la nueva pregunta
+                              //volver a posicion inicial freddie
   }
 
 
@@ -79,7 +82,7 @@ class Game {
             } else {
             
                 console.log("respuesta incorrecta")
-                this.numeroVida();
+                //this.numeroVida();
             }
         }
     });

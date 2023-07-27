@@ -5,9 +5,12 @@ class Lives {
         
     //creo elemento en el DOM
         this.nodeLives = document.createElement("img");
+        //this.nodeLivesContador = this.contadorVidas;
         this.nodeLives.src = "./images/lives.png";
         gameBoxNode.append(this.nodeLives);
-    
+        
+
+
     //propiedades de mi corazon
         this.x = 50; // posicion eje x
         this.y = 40; // posicion eje y
