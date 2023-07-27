@@ -1,14 +1,18 @@
 
 class Lives {
 
-    constructor (){
+    constructor (livesPlayer){
         
     //creo elemento en el DOM
-        this.nodeLives = document.createElement("img");
-        //this.nodeLivesContador = this.contadorVidas;
-        this.nodeLives.src = "./images/lives.png";
-        gameBoxNode.append(this.nodeLives);
-        
+    this.nodeLives = document.createElement("div");
+    this.nodeLives.style.backgroundImage = `url("./images/lives.png")`;
+    this.nodeLives.style.backgroundSize = "contain";
+    this.nodeLives.style.fontSize = "30px"
+    this.nodeLives.style.backgroundRepeat = "no-repeat";
+    gameBoxNode.append(this.nodeLives);
+    this.livesPlayer = livesPlayer;
+    this.nodeLives.innerText = this.livesPlayer;
+
 
 
     //propiedades de mi corazon
@@ -27,6 +31,8 @@ class Lives {
 
     }
 
+    updateLives = () => {
 
-
+        this.nodeLives.innerText = this.livesPlayer;
+    }   
 }

@@ -17,8 +17,8 @@ class Game {
     this.gameWin = false; // booleano -> ganar la partida 
 
     //propiedades de las vidas
-    this.livesHeart = new Lives();
     this.livesPlayer = 3; //contador de vidas 
+    this.livesHeart = new Lives(this.livesPlayer);
     this.winCount = 0; //contador victorias
   }
 
@@ -50,7 +50,10 @@ class Game {
       this.AnswersArray[i].removeAnswer(); // pasar por cada respuesta del array y ejecutar el metodo para removerlo del DOM
     }
     this.AnswersArray = []; // vaciar el array
-    // mostrar nuevas respuestas asociadas a la nueva pregunta
+
+    this.trueAnswer = questionsAnswer[this.randomquestions];
+    this.trueAnswerIndex = this.trueAnswer.respuesta;
+    this.trueAnswerText = this.trueAnswer.opciones[this.trueAnswerIndex];// mostrar nuevas respuestas asociadas a la nueva pregunta
 
     this.freddie.positionInit(); //actualizo posicion de freddie
   };
@@ -64,8 +67,6 @@ class Game {
         this.freddie.y < cadaRespuesta.y + cadaRespuesta.h &&
         this.freddie.y + this.freddie.h > cadaRespuesta.y
       ) {
-        console.log(cadaRespuesta.respuesta);
-        console.log(this.trueAnswerText);
 
         if (cadaRespuesta.respuesta === this.trueAnswerText) {
           console.log("respuesta correcta");
@@ -74,28 +75,24 @@ class Game {
           this.avanceQuestion();
           this.avanceAnswer();
 
-          this.trueAnswer = questionsAnswer[this.randomquestions];
-          this.trueAnswerIndex = this.trueAnswer.respuesta;
-          this.trueAnswerText = this.trueAnswer.opciones[this.trueAnswerIndex];
-
-
-          console.log(cadaRespuesta.respuesta);
-          console.log(this.trueAnswer);
           if (this.winCount === 3)
               this.winGame();
               console.log(this.winCount)
         } else {
+          cadaRespuesta.nodeAnswers.classList.add("falseAnswer");
           console.log("respuesta incorrecta");
-            // this.livesPlayer = () => {
-            //   if (this.livesPlayer > 0) {
-            //     console.log("reste una vida");
-            //     this.livesPlayer =  this.livesPlayer - 1;
-            //   }
-            //   else if ( this.livesPlayer === 0) {
-            //     console.log("gameOver");
-            //     //this.gameOver();
-            //   }
-            // }
+              if (this.livesPlayer > 0) {
+                 console.log("reste una vida");
+                 this.livesPlayer =  this.livesPlayer - 1;
+                 this.avanceQuestion();
+                 this.avanceAnswer();
+                 this.livesHeart.livesPlayer = this.livesPlayer;
+                 this.livesHeart.updateLives()
+               }
+               else if ( this.livesPlayer === 0) {
+                 console.log("gameOver");
+                 this.gameOver();
+               }
         }
       }
     });
@@ -127,11 +124,8 @@ class Game {
       requestAnimationFrame(this.gameLoop);
     } // si isGameOn es falso deten la recursion
   };
+
+
 }
 
-//PLANIFICACIÓN
 
-//contandor de vidas que se reste cuando se falla una pregunta o sino gameover
-//cuando se acierten las preguntas sumar puntuacion
-//aparecer nuevas respuestas y preguntas cuando se acierte la respuesta
-//pantalla de Win / score
