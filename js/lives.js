@@ -20,8 +20,8 @@ class Lives {
     //propiedades de mi corazon
         this.x = 50; // posicion eje x
         this.y = 40; // posicion eje y
-        this.w = 100; //ancho
-        this.h = 75; //alto
+        this.w = 80; //ancho
+        this.h = 60; //alto
 
     //ajustar el tamaño y posicion inicial del Corazon
 

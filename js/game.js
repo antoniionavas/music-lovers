@@ -27,6 +27,11 @@ class Game {
     this.isGameOn = false;
     gameScreenNode.style.display = "none"; //ocultar pantalla de juego
     gameoverScreenNode.style.display = "flex"; //mostrar la pantalla final
+    this.gameOverSound = new Audio (
+      "../sounds/gameOver.mp3"
+      );
+    this.gameOverSound.play();
+    this.gameOverSound.volume = 0.1;
   };
 
   winGame = () => {
@@ -35,6 +40,11 @@ class Game {
     gameScreenNode.style.display = "none"; //ocultar pantalla de juego
     splashScreenNode.style.display = "none"; //ocultar pantalla
     winScreenNode.style.display = "flex"; // mostrar pantalla
+    this.winGameSound = new Audio (
+      "../sounds/winGame.mp3"
+      );
+    this.winGameSound.play();
+    this.winGameSound.volume = 0.1;
   };
 
   avanceQuestion = () => {
@@ -72,6 +82,11 @@ class Game {
           console.log("respuesta correcta");
           this.winCount++;
           cadaRespuesta.nodeAnswers.classList.add("trueAnswer");
+          this.correctAnswer = new Audio (
+            "../sounds/correctAnswer.mp3"
+            );
+          this.correctAnswer.play();
+          this.correctAnswer.volume = 0.1;
           this.avanceQuestion();
           this.avanceAnswer();
 
@@ -79,6 +94,13 @@ class Game {
               this.winGame();
               console.log(this.winCount)
         } else {
+          this.incorrectAnswer = new Audio (
+            "../sounds/incorrectAnswer.mp3"
+            );
+          this.incorrectAnswer.play();
+          this.incorrectAnswer.volume = 0.1;
+          this.avanceQuestion();
+          this.avanceAnswer();
           cadaRespuesta.nodeAnswers.classList.add("falseAnswer");
           console.log("respuesta incorrecta");
               if (this.livesPlayer > 0) {
@@ -130,6 +152,7 @@ class Game {
   //implementar sonidos en diferentes momentos
   //meter nuevas preguntas y respuestas
   //configurar visualizacion del contador
+  //boton restart winscreen
 
 }
 

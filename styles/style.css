@@ -23,6 +23,17 @@ body {
     border-radius: 10px; 
   }
 
+
+  
+  #restart-btn2 {
+    background-color: green;
+    color: white;
+    padding: 20px;
+    font-size: 20px;
+    border-radius: 10px; 
+    margin-top: 365px;
+  }
+
   #title-startScreen {
     font-size: 50px;
     font-weight: bold;

@@ -2,6 +2,7 @@
 
 const startBtnNode = document.querySelector("#start-btn");
 const restartBtnNode = document.querySelector("#restart-btn");
+const restartBtnNode2 = document.querySelector("#restart-btn2");
 const splashScreenNode = document.querySelector("#splash-screen");
 const gameScreenNode = document.querySelector("#game-screen");
 const gameBoxNode = document.querySelector("#game-box");
@@ -40,7 +41,7 @@ function restartGame() {
 
 startBtnNode.addEventListener("click", startGame);
 restartBtnNode.addEventListener("click", restartGame);
-
+restartBtnNode2.addEventListener("click", restartGame);
 
 window.addEventListener("keydown", (event) => {
   if (event.key === "ArrowUp") {
