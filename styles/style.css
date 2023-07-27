@@ -47,15 +47,18 @@ body {
     background-image: url("../images/start.jpg"); 
     background-position: center;
     background-size: cover;
-    width: 1500px;
+    width: 1700px;
     height:800px; 
     position:relative; /* posicionar elementos internos relativos a la caja */
     border-radius: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
   }
 
   #game-box{
     background-color: darkgray;
-    width: 1500px;
+    width: 1700px;
     height:800px; 
     border-radius: 20px;
     overflow:hidden; /* prevenir que los elementos visualmente se salgan de la pantalla de juego */
@@ -64,27 +67,31 @@ body {
     background-image: url("../images/main-background.jpg"); 
     background-position: center;
     background-size: cover;
-
+    display: none;
+    justify-content: center;
+    text-align: center;
 }
 
-
-  #game-screen{
-      display: none; /* hace desaparecer los elementos temporalmente en el dom*/
-  }
-
   #win-screen{
+    display: none;
     background-image: url("../images/youwin.jpg"); 
-    width: 1500px;
+    width: 1700px;
     height:800px; 
-    border-radius: 20px;
-  }
+    background-position: center;
+    background-size: cover;
+    justify-content: center;
+    text-align: center;
+}
+
 
   #gameover-screen{
     display: none;
     background-image: url("../images/gameover.jpg"); 
-    width: 1500px;
+    width: 1700px;
     height:800px; 
     border-radius: 20px;
+    justify-content: center;
+    text-align: center;
   }
 
 

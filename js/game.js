@@ -64,9 +64,12 @@ class Game {
       this.AnswersArray[i].removeAnswer(); // pasar por cada respuesta del array y ejecutar el metodo para removerlo del DOM
     }                                   
      this.AnswersArray = []; // vaciar el array 
-     this.showAnswer(this.randomquestions); // mostrar nuevas respuestas asociadas a la nueva pregunta
-                                            //volver a posicion inicial freddie
-   
+     //this.randomquestions = Math.floor(Math.random() * questionsAnswer.length);
+     //this.showAnswer(this.randomquestions); // mostrar nuevas respuestas asociadas a la nueva pregunta
+     
+      this.freddie.x = 700;                            //volver a posicion inicial freddie
+      this.freddie.y = 600;
+      this.freddie.positionUpdate();
   }
 
 

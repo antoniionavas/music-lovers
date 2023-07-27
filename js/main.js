@@ -17,6 +17,7 @@ function startGame() {
 
   splashScreenNode.style.display = "none";
   gameScreenNode.style.display = "flex";
+  gameBoxNode.style.display ="flex";
   winScreenNode.style.display = "none";
 
   // creo un nuevo objeto de Game e inicia el gameLoop
