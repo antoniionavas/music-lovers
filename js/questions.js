@@ -14,4 +14,9 @@ class Questions {
     this.wQuestions = 150; //ancho
     this.hQuestions = 150; //alto
   }
+
+    removeQuestion  = () => {
+    
+      this.nodeQuestions.remove();
+    }
 }

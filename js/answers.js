@@ -37,6 +37,9 @@ class Answers {
         this.nodeAnswers.style.left = `${this.x}px`;
     }
 
-
+    removeAnswer  = () => {
+    
+        this.nodeAnswers.remove();
+      }
 
 }

@@ -1,6 +1,7 @@
 // * GLOBAL VARIABLES
 
 const startBtnNode = document.querySelector("#start-btn");
+const restartBtnNode = document.querySelector("#restart-btn");
 const splashScreenNode = document.querySelector("#splash-screen");
 const gameScreenNode = document.querySelector("#game-screen");
 const gameBoxNode = document.querySelector("#game-box");
@@ -21,9 +22,21 @@ function startGame() {
   gameObject.gameLoop(); // llamamos al objeto e invocamos la funcion de recursion
 }
 
+
+function restartGame() {
+  console.log("iniciando el juego");
+
+  gameoverScreenNode.style.display = "none";
+  splashScreenNode.style.display = "flex";
+  gameBoxNode.innerHTML="";
+}
+
+
 // * ADD EVENT LISTENERS
 
 startBtnNode.addEventListener("click", startGame);
+restartBtnNode.addEventListener("click", restartGame);
+
 
 window.addEventListener("keydown", (event) => {
   if (event.key === "ArrowUp") {

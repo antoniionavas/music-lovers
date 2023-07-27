@@ -9,10 +9,10 @@ class Lives {
         gameBoxNode.append(this.nodeLives);
     
     //propiedades de mi corazon
-        this.x = 500; // posicion eje x
-        this.y = 200; // posicion eje y
-        this.w = 300; //ancho
-        this.h = 150; //alto
+        this.x = 50; // posicion eje x
+        this.y = 40; // posicion eje y
+        this.w = 140; //ancho
+        this.h = 115; //alto
 
     //ajustar el tamaño y posicion inicial del Corazon
 

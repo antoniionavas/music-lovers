@@ -17,6 +17,21 @@ class Game {
 
     //propiedades de las vidas
     this.livesHeart = new Lives();
+    contadorVidas = 3;
+
+  }
+
+
+  numeroVida = () => {
+    if (contadorVidas > 0) {
+      console.log("reste una vida");
+      contadorVidas = contadorVidas - 1;
+    }
+    else if (contadorVidas === 0) {
+      console.log("gameOver");
+      //this.gameOver();
+    }
+      return contadorVidas;
   }
 
   gameOver = () => {
@@ -27,14 +42,20 @@ class Game {
 
 
   avanceQuestion  = () => { 
-
+    this.pregunta.removeQuestion();
     this.randomquestions = Math.floor(Math.random() * questionsAnswer.length);
     this.pregunta = new Questions(this.randomquestions);
     this.trueAnswer = questionsAnswer[this.randomquestions]
     this.trueAnswerIndex = this.trueAnswer.respuesta;
     this.trueAnswerText  = this.trueAnswer.opciones[this.trueAnswerIndex];
-    this.showAnswer(numero);
+  
     }
+
+
+  avanceAnswer = () => { 
+    this.trueAnswer.removeAnswer();
+    this.showAnswer(numero);
+  }
 
 
   collisionFreddieAnswer = () => {
@@ -53,11 +74,12 @@ class Game {
                 console.log("respuesta correcta")
                 cadaRespuesta.nodeAnswers.classList.add("trueAnswer");
                 this.avanceQuestion();
+                this.avanceAnswer();
 
             } else {
             
                 console.log("respuesta incorrecta")
-                //this.gameOver();
+                this.numeroVida();
             }
         }
     });
@@ -93,28 +115,12 @@ class Game {
 
 
 }
+
+
+
 //PLANIFICACIÓN
 
-//PROPIEDADES
-//freddy -> x, y, h, w
-//questionsdiv -> x, y, h, w
-//answerdiv -> x, y, h, w
-//vidas -> x, y, h, w
-//score -> x, y, h, w
-
-//METODOS
-//posicionar las q&a
-//movimiento de las q&a
-//colision del personaje con la respuesta elegida por el user
-//movimiento del personaje
-//acción vidas (respuesta incorrecta )
-//accion score (respuesta correcta )
-//finish screen
-//gameover screen
-//reinicio
-
-//EXTRA
-//accion del personaje
-//score
-//tiempo restante para contestar
-//accion música x tiempo para elegir respuesta
+//contandor de vidas que se reste cuando se falla una pregunta o sino gameover
+//cuando se acierten las preguntas sumar puntuacion
+//aparecer nuevas respuestas y preguntas cuando se acierte la respuesta 
+//pantalla de Win / score
