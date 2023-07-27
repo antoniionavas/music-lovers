@@ -101,16 +101,16 @@ class Game {
   showAnswer = (numero) => {
     if (this.AnswersArray.length < 4) {
       this.AnswersArray.push(
-        new Answers(questionsAnswer[numero].opciones[0], 130, 350)
+        new Answers(questionsAnswer[numero].opciones[0], 300, 350)
       );
       this.AnswersArray.push(
-        new Answers(questionsAnswer[numero].opciones[1], 350, 250)
+        new Answers(questionsAnswer[numero].opciones[1], 650, 250)
       );
       this.AnswersArray.push(
-        new Answers(questionsAnswer[numero].opciones[2], 700, 350)
+        new Answers(questionsAnswer[numero].opciones[2], 1000, 350)
       );
       this.AnswersArray.push(
-        new Answers(questionsAnswer[numero].opciones[3], 1000, 250)
+        new Answers(questionsAnswer[numero].opciones[3], 1400, 250)
       );
     }
   };
@@ -125,6 +125,11 @@ class Game {
     } // si isGameOn es falso deten la recursion
   };
 
+
+
+  //implementar sonidos en diferentes momentos
+  //meter nuevas preguntas y respuestas
+  //configurar visualizacion del contador
 
 }
 

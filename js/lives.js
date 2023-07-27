@@ -7,7 +7,9 @@ class Lives {
     this.nodeLives = document.createElement("div");
     this.nodeLives.style.backgroundImage = `url("./images/lives.png")`;
     this.nodeLives.style.backgroundSize = "contain";
-    this.nodeLives.style.fontSize = "30px"
+    this.nodeLives.style.fontSize = "35px";
+    this.nodeLives.style.fontWeight = "bold";
+    this.nodeLives.style.padding ="40px";
     this.nodeLives.style.backgroundRepeat = "no-repeat";
     gameBoxNode.append(this.nodeLives);
     this.livesPlayer = livesPlayer;
@@ -18,8 +20,8 @@ class Lives {
     //propiedades de mi corazon
         this.x = 50; // posicion eje x
         this.y = 40; // posicion eje y
-        this.w = 140; //ancho
-        this.h = 115; //alto
+        this.w = 100; //ancho
+        this.h = 75; //alto
 
     //ajustar el tamaño y posicion inicial del Corazon
 
