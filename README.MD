@@ -1,6 +1,6 @@
 # MUSIC-LOVERS 
 
-## [The Game](https://antoniionavas.github.io/music-lovers/)
+## [MUSIC LOVERS GAME](https://antoniionavas.github.io/music-lovers/)
 
 ![Game Logo](./images/start.jpg)
 
@@ -137,3 +137,7 @@
 ## questions-answer.js
 
  - este archivo contiene mi array con los datos de las preguntas y respuestas
+
+ ## Extra Links
+
+  - Boceto: https://excalidraw.com/#json=8P3ffaabLJjPDgHPpfg6s,aEqlPqNItg8CAUfiMw4fjw 
