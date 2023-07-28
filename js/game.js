@@ -80,7 +80,6 @@ class Game {
       ) {
 
         if (cadaRespuesta.respuesta === this.trueAnswerText) {
-          console.log("respuesta correcta");
           this.winCount++;
           cadaRespuesta.nodeAnswers.classList.add("trueAnswer");
           this.correctAnswer = new Audio (
@@ -93,7 +92,6 @@ class Game {
 
           if (this.winCount === 4)
               this.winGame();
-              console.log(this.winCount)
         } else {
           this.incorrectAnswer = new Audio (
             "./sounds/incorrectAnswer.mp3"
@@ -103,9 +101,7 @@ class Game {
           this.avanceQuestion();
           this.avanceAnswer();
           cadaRespuesta.nodeAnswers.classList.add("falseAnswer");
-          console.log("respuesta incorrecta");
               if (this.livesPlayer > 0) {
-                 console.log("reste una vida");
                  this.livesPlayer =  this.livesPlayer - 1;
                  this.avanceQuestion();
                  this.avanceAnswer();
@@ -113,7 +109,6 @@ class Game {
                  this.livesHeart.updateLives()
                }
                else if ( this.livesPlayer === 0) {
-                 console.log("gameOver");
                  this.gameOver();
                }
         }

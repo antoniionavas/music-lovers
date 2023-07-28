@@ -80,6 +80,18 @@
     - This.h
     - DOM Node
 
+## Lives.js
+
+- Lives()
+    - This.x
+    - This.y
+    - This.w
+    - This.h
+    - This.livesPLayer
+    - updateLives()
+    - DOM Node
+
+
 ## Game.js
 
 - Game()
@@ -96,5 +108,28 @@
     - This.livesHeart
     - This.winCount
     - gameOver()
+    - winGame()
+    - avanceQuestions()
+    - avanceAnswer()
+    - collisionFreddieAnswer()
+    - showAnswer()
+    - gameLoop()
     - This.gameOverSound
+    - This.incorrectAnswer
+    - This.correctAnswer
+    - This.winGameSound
     - DOM Node
+
+## Main.js
+
+- startGame()
+- restartGame()
+- This.gameSound
+- startBtnNode.addEventListener()
+- restartBtnNode.addEventListener()
+- restartBtnNode2.addEventListener()
+- window.addEventListener
+
+## questions-answer.js
+
+ - este archivo contiene mi array con los datos de las preguntas y respuestas

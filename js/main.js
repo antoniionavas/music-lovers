@@ -15,8 +15,6 @@ let gameObject = null;
 // * STATE MANAGEMENT FUNCTIONS
 
 function startGame() {
-  console.log("iniciando el juego");
-
   splashScreenNode.style.display = "none";
   gameScreenNode.style.display = "flex";
   gameBoxNode.style.display ="flex";
@@ -35,7 +33,6 @@ function startGame() {
 
 
 function restartGame() {
-  console.log("iniciando el juego");
   gameoverScreenNode.style.display = "none";
   splashScreenNode.style.display = "flex";
   winScreenNode.style.display = "none";
