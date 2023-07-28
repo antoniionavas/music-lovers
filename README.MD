@@ -21,9 +21,13 @@
 
 - Sistema de puntuación o score que por cada pregunta dependiendo de la dificultad sume una puntuación. 
 
+- Mejorar el diseño de la web (preguntas y respuestas).
+
+- Funcionalidad para mostrar nuevas respuestas.
+
 - Una vez escogida la respuesta cambiar la clase de esta dependiendo si es correcta o no. 
 
-- Si la respuesta es incorrecta cambiar clase de la correcta para ver cuál era esta. 
+- Mostrar la respuesta correcta al elegir la incorrecta. 
 
 - Que el personaje al elegir su respuesta realice un movimiento.
 
