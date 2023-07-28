@@ -28,9 +28,9 @@ class Game {
     gameScreenNode.style.display = "none"; //ocultar pantalla de juego
     gameoverScreenNode.style.display = "flex"; //mostrar la pantalla final
     this.gameOverSound = new Audio (
-      "../sounds/gameOver.mp3"
+      "./sounds/gameOver.mp3"
       );
-    this.gameSound.pause();
+    this.gameOverSound.pause();
     this.gameOverSound.play();
     this.gameOverSound.volume = 0.1;
   };
@@ -42,7 +42,7 @@ class Game {
     splashScreenNode.style.display = "none"; //ocultar pantalla
     winScreenNode.style.display = "flex"; // mostrar pantalla
     this.winGameSound = new Audio (
-      "../sounds/winGame.mp3"
+      "./sounds/winGame.mp3"
       );
     this.winGameSound.play();
     this.winGameSound.volume = 0.1;
@@ -84,7 +84,7 @@ class Game {
           this.winCount++;
           cadaRespuesta.nodeAnswers.classList.add("trueAnswer");
           this.correctAnswer = new Audio (
-            "../sounds/correctAnswer.mp3"
+            "./sounds/correctAnswer.mp3"
             );
           this.correctAnswer.play();
           this.correctAnswer.volume = 0.1;
@@ -96,7 +96,7 @@ class Game {
               console.log(this.winCount)
         } else {
           this.incorrectAnswer = new Audio (
-            "../sounds/incorrectAnswer.mp3"
+            "./sounds/incorrectAnswer.mp3"
             );
           this.incorrectAnswer.play();
           this.incorrectAnswer.volume = 0.1;

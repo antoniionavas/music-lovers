@@ -27,7 +27,7 @@ function startGame() {
   gameObject.gameLoop(); // llamamos al objeto e invocamos la funcion de recursion
 
   this.gameSound = new Audio (
-    "../sounds/tiktokGame.mp3"
+    "./sounds/tiktokGame.mp3"
     );
   this.gameSound.play();
   this.gameSound.volume = 0.1;
