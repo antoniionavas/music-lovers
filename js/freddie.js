@@ -27,13 +27,12 @@ class Freddie {
     this.node.style.left = `${this.x}px`;
   };
 
-  positionInit = () => {  //volver a posicion inicial freddie
-    this.x = 700;               
+  positionInit = () => {
+    //volver a posicion inicial freddie
+    this.x = 700;
     this.y = 600;
     this.positionUpdate();
-
   };
-
 
   moveUp = () => {
     if (this.y + this.h + 10 <= gameBoxNode.clientHeight) {

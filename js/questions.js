@@ -4,7 +4,8 @@ class Questions {
 
     this.nodeQuestions = document.createElement("div");
 
-    this.nodeQuestions.textContent = questionsAnswer[this.randomquestions].pregunta;
+    this.nodeQuestions.textContent =
+      questionsAnswer[this.randomquestions].pregunta;
     this.nodeQuestions.id = "question";
     gameBoxNode.append(this.nodeQuestions);
 
@@ -15,8 +16,7 @@ class Questions {
     this.hQuestions = 150; //alto
   }
 
-    removeQuestion  = () => {
-    
-      this.nodeQuestions.remove()
-    }
+  removeQuestion = () => {
+    this.nodeQuestions.remove();
+  };
 }
